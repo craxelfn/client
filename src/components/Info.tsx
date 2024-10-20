@@ -7,27 +7,28 @@ import ListItemText from '@mui/material/ListItemText';
 import Typography from '@mui/material/Typography';
 
 const products = [
-  {
-    name: 'Professional plan',
-    desc: 'Monthly subscription',
-    price: '$15.00',
-  },
-  {
-    name: 'Dedicated support',
-    desc: 'Included in the Professional plan',
-    price: 'Free',
-  },
-  {
-    name: 'Hardware',
-    desc: 'Devices needed for development',
-    price: '$69.99',
-  },
-  {
-    name: 'Landing page template',
-    desc: 'License',
-    price: '$49.99',
-  },
-];
+    {
+      name: 'Consultation Package',
+      desc: 'Monthly subscription for unlimited doctor consultations',
+      price: '$50.00',
+    },
+    {
+      name: 'Priority Support',
+      desc: '24/7 customer support included with premium plans',
+      price: 'Free',
+    },
+    {
+      name: 'Medical Devices',
+      desc: 'Health monitoring devices required for remote consultations',
+      price: '$120.00',
+    },
+    {
+      name: 'Appointment Booking',
+      desc: 'Access to our doctor appointment scheduling platform',
+      price: '$25.00',
+    },
+  ];
+  
 
 interface InfoProps {
   totalPrice: string;

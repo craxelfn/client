@@ -4,14 +4,18 @@ import Sidebar from '../components/Sidebar/Sidebar';
 
 import "./globals.css";
 
-
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
-      <body className="min-h-screen flex flex-col  ">
+      <head>
+        <meta
+          name="format-detection"
+          content="telephone=no, date=no, email=no, address=no"
+        />
+      </head>
+      <body className="min-h-screen flex flex-col">
         <Navbar />
 
-        
         <div className="flex">
           <Sidebar /> 
           <main className="flex-grow pb-[250px]"> 
@@ -19,7 +23,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           </main>
         </div>
 
-        <Footer  />
+        <Footer />
       </body>
     </html>
   );

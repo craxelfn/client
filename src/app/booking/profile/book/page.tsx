@@ -21,9 +21,8 @@ import InfoMobile from '../../../../components/InfoMobile';
 import PaymentForm from '../../../../components/PaymentForm';
 import Review from '../../../../components/Review';
 import SitemarkIcon from '../../../../components/SitemarkIcon';  
-import TemplateFrame from '../../../../theme/TemplateFrame';
 
-const steps = ['Shipping address', 'Payment details', 'Review your order'];
+const steps = ['Confirme appointement', 'Payment details', 'Review your order'];
 function getStepContent(step: number) {
   switch (step) {
     case 0:
@@ -72,13 +71,8 @@ export default function Checkout() {
     setActiveStep(activeStep - 1);
   };
   return (
-    <TemplateFrame
-      toggleCustomTheme={toggleCustomTheme}
-      showCustomTheme={showCustomTheme}
-      mode={mode}
-      toggleColorMode={toggleColorMode}
-    >
-      <ThemeProvider theme={showCustomTheme ? checkoutTheme : defaultTheme}>
+    
+        <ThemeProvider theme={showCustomTheme ? checkoutTheme : defaultTheme}>
         <CssBaseline enableColorScheme />
 
         <Grid container sx={{ height: { xs: '100%', sm: '100dvh' } }}>
@@ -94,6 +88,7 @@ export default function Checkout() {
               pt: 16,
               px: 10,
               gap: 4,
+              
             }}
           >
             <SitemarkIcon />
@@ -283,6 +278,7 @@ export default function Checkout() {
           </Grid>
         </Grid>
       </ThemeProvider>
-    </TemplateFrame>
+        
+      
   );
 }

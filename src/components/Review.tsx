@@ -9,7 +9,7 @@ import ListItemText from '@mui/material/ListItemText';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
-const addresses = ['1 MUI Drive', 'Reactville', 'Anytown', '99999', 'USA'];
+const addresses = ['1 MUI Drive', 'Reactville', 'Anytown', '99999', 'Maroc'];
 const payments = [
   { name: 'Card type:', detail: 'Visa' },
   { name: 'Card holder:', detail: 'Mr. John Smith' },
