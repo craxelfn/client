@@ -12,12 +12,11 @@ import dayjs from "dayjs";
 import Link from "next/link";
 
 const ProfilePage = () => {
-	// Mock data for visualization
 	const authUser = { username: "john_doe", name: "John Doe" };
 	const userProfile = { username: "john_doe", name: "John Doe" };
 
 	// Assuming this is the user's own profile for now
-	const isOwnProfile = true;
+	const isOwnProfile = false;
 	const userData = {
 		about: "A passionate full-stack developer with 5+ years of experience in building scalable web applications. I love to work on innovative projects and am constantly seeking to learn new technologies.",
 		experience: [
@@ -65,8 +64,10 @@ const ProfilePage = () => {
 				endYear: "2012",
 			},
 		],
+		location: "San Francisco, CA",  // Added location
 		isOwnProfile: true,
 	};
+	
 
 	// Mock handleSave function (no actual functionality)
 	const handleSave = (updatedData) => {

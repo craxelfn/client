@@ -1,6 +1,7 @@
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
 import Sidebar from '../components/Sidebar/Sidebar';
+import Chatbot from '../components/Chatbot'; 
 
 import "./globals.css";
 
@@ -15,13 +16,15 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       </head>
       <body className="min-h-screen flex flex-col">
         <Navbar />
-
+        
         <div className="flex">
           <Sidebar /> 
           <main className="flex-grow pb-[250px]"> 
             {children}
           </main>
         </div>
+
+        <Chatbot /> {/* Add the Chatbot here */}
 
         <Footer />
       </body>

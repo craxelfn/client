@@ -65,15 +65,15 @@ const Sidebar = () => {
               <li className={`relative mb-1 ${activeMenu === 2 ? 'active' : ''}`} onClick={() => handleMenuClick(2)}>
                 <a href="#" className="flex items-center gap-2 text-sm font-medium text-gray-500 hover:text-black hover:bg-gray-100 p-3 rounded transition-all duration-300">
                   <Event />
-                  <span className={`${sidebarActive ? 'hidden' : 'flex-1'}`}>Appointments</span>
+                  <span className={`${sidebarActive ? 'hidden' : 'flex-1'}`}>My space</span>
                   {!sidebarActive && <i className="arrow ml-auto transition-transform duration-300" style={{ transform: activeMenu === 2 ? 'rotate(180deg)' : 'rotate(0deg)' }}></i>}
                 </a>
                 <ul className={`ml-5 pl-5 border-l border-gray-200 ${activeMenu === 2 ? 'block' : 'hidden'}`}>
                   <li className="mb-1">
-                    <a href="#" className="text-xs text-gray-500 p-2 block">Upcoming Appointments</a>
+                    <a href="/doctor" className="text-xs text-gray-500 p-2 block">Dashboard</a>
                   </li>
                   <li>
-                    <a href="#" className="text-xs text-gray-500 p-2 block">Reschedule Appointment</a>
+                    <a href="#" className="text-xs text-gray-500 p-2 block">Appointment</a>
                   </li>
                 </ul>
               </li>
