@@ -1,9 +1,9 @@
 "use client";
-import ProfileHeader from "../../../components/ProfileHeader";
-import AboutSection from "../../../components/AboutSection";
-import ExperienceSection from "../../../components/ExperienceSection";
-import EducationSection from "../../../components/EducationSection";
-import Testimonials from '../../../components/Testimonials'
+import ProfileHeader from "../../../../components/ProfileHeader";
+import AboutSection from "../../../../components/AboutSection";
+import ExperienceSection from "../../../../components/ExperienceSection";
+import EducationSection from "../../../../components/EducationSection";
+import Testimonials from '../../../../components/Testimonials'
 import { useState } from "react";
 import { StaticDatePicker, LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";

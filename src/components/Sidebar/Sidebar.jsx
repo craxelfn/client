@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import { Person, Event, Chat, Settings, Help, Logout } from '@mui/icons-material';
-import Image from 'next/image';
+import Image from 'next/image'; 
 
 const Sidebar = () => {
   const [sidebarActive, setSidebarActive] = useState(false);
@@ -12,7 +12,7 @@ const Sidebar = () => {
   };
 
   return (
-    <div className={`flex h-screen sticky top-10 min-h-full z-10 ${sidebarActive ? 'w-24' : 'w-64'} transition-all duration-300 bg-white shadow-lg ${sidebarActive ? 'md:flex' : 'hidden md:flex'}`}>
+    <div className={`hidden md:block flex h-screen sticky top-10 min-h-full z-10 ${sidebarActive ? 'w-24' : 'w-64'} transition-all duration-300 bg-white shadow-lg ${sidebarActive ? 'md:flex' : 'hidden md:flex'}`}>
       <div className="relative flex flex-col gap-5 p-6 w-full">
         <div className="absolute right-[-14px] top-[3.5%] w-7 h-7 rounded-lg flex items-center justify-center cursor-pointer border-2 border-gray-200 bg-white" onClick={() => setSidebarActive(!sidebarActive)}>
           <i className={`transition-all duration-300 ${sidebarActive ? 'rotate-180' : ''}`}>

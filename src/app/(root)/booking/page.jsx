@@ -1,8 +1,8 @@
 "use client";
 import React from 'react';
-import Imagefade from '../../components/Imagefade/Imagefade';
-import DoctorCard from '../../components/DoctorCard/DoctorCard';
-import SearchDoctor from '../../components/SearchDoctor/SearchDoctor';
+import Imagefade from '../../../components/Imagefade/Imagefade';
+import DoctorCard from '../../../components/DoctorCard/DoctorCard';
+import SearchDoctor from '../../../components/SearchDoctor/SearchDoctor';
 
 const Page = () => {
   return (

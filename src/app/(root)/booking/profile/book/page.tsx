@@ -14,13 +14,13 @@ import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider, PaletteMode } from '@mui/material/styles';
 import ChevronLeftRoundedIcon from '@mui/icons-material/ChevronLeftRounded';
 import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
-import AddressForm from '../../../../components/AddressForm';
-import getCheckoutTheme from '../../../../theme/getCheckoutTheme';
-import Info from '../../../../components/Info';
-import InfoMobile from '../../../../components/InfoMobile';
-import PaymentForm from '../../../../components/PaymentForm';
-import Review from '../../../../components/Review';
-import SitemarkIcon from '../../../../components/SitemarkIcon';  
+import AddressForm from '../../../../../components/AddressForm';
+import getCheckoutTheme from '../../../../../theme/getCheckoutTheme';
+import Info from '../../../../../components/Info';
+import InfoMobile from '../../../../../components/InfoMobile';
+import PaymentForm from '../../../../../components/PaymentForm';
+import Review from '../../../../../components/Review';
+import SitemarkIcon from '../../../../../components/SitemarkIcon';  
 
 const steps = ['Confirme appointement', 'Payment details', 'Review your order'];
 function getStepContent(step: number) {

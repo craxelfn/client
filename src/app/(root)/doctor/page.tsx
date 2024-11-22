@@ -5,7 +5,7 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { TimePicker } from "@mui/x-date-pickers/TimePicker";
-import UpcomingAppointments from '../../components/UpcomingAppointments'
+import UpcomingAppointments from '../../../components/UpcomingAppointments'
 import {
   Dialog,
   DialogTitle,
@@ -270,6 +270,7 @@ const Page: React.FC = () => {
           </DialogActions>
         </Dialog>
       </LocalizationProvider>
+      <div className="w-full"></div>
         </div>
         <div className='lg:w-1/3 w-full p-4 sticky top-10'>
           <div className='bg-white shadow rounded-lg p-6 mb-6'>
