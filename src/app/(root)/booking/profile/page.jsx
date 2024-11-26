@@ -16,7 +16,7 @@ const ProfilePage = () => {
 	const userProfile = { username: "john_doe", name: "John Doe" };
 
 	// Assuming this is the user's own profile for now
-	const isOwnProfile = false;
+	const isOwnProfile = true;
 	const userData = {
 		about: "A passionate full-stack developer with 5+ years of experience in building scalable web applications. I love to work on innovative projects and am constantly seeking to learn new technologies.",
 		experience: [

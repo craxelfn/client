@@ -4,7 +4,9 @@ import dayjs, { Dayjs } from "dayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
+import { StatsCards } from "../../../components/stats-cards";
 import { TimePicker } from "@mui/x-date-pickers/TimePicker";
+import { QuickSchedule } from "../../../components/quick-schedule";
 import UpcomingAppointments from '../../../components/UpcomingAppointments'
 import {
   Dialog,
@@ -144,10 +146,13 @@ const Page: React.FC = () => {
   const daysOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
   return (
     <div className='container mx-auto p-4 '>
+      <div className="w-full flex-row" >
+        <p className="text-xl text-gray-400">Hi. Stevan dux</p>
+        <StatsCards />
+      </div>
 			<div className='flex flex-col lg:flex-row '>
 				<div className='lg:w-2/3 w-full p-4'>
-        <p className="text-xl text-gray-400">Hi. Stevan dux</p>
-      <p className="text-3xl font-bold pb-5 ">My Availability</p>
+        <p className="text-3xl font-bold pb-5 ">My Availability</p>
       <LocalizationProvider dateAdapter={AdapterDayjs}>
         <DatePicker
           label="Select Month"
@@ -277,7 +282,12 @@ const Page: React.FC = () => {
             <UpcomingAppointments appointments={appointmentsData} />
           </div>
         </div>
+        
       </div>
+      <div className="lg:w-2/3 w-full p-4">
+        <QuickSchedule />
+      </div>
+      
     </div>
       
   );

@@ -21,7 +21,7 @@ const AppointmentDetails = () => {
     userName: 'John',
     userLastName: 'Doe',
     phoneNumber: '+1 123 456 7890',
-    time: '9:20', // 24-hour format
+    time: '17:00', // 24-hour format
   };
 
   const [timeRemaining, setTimeRemaining] = useState('');
@@ -65,7 +65,7 @@ const AppointmentDetails = () => {
 
   const handleSubmitForm = useCallback(async (e) => {
     e.preventDefault();
-    if (userId && roomId) {
+    if (socket && userId && roomId) {
       setIsRedirecting(true);
       try {
         socket.emit("room:join", { userId, roomId });
@@ -80,17 +80,18 @@ const AppointmentDetails = () => {
   }, [userId, roomId, socket, router]);
 
   const handleJoinRoom = useCallback((data) => {
-    const { userId, roomId } = data;
-    if (!isRedirecting) {
+    if (socket && !isRedirecting) {
       router.push('/doctor/call');
     }
-  }, [router, isRedirecting]);
+  }, [socket, router, isRedirecting]);
 
   useEffect(() => {
-    socket.on("room:join", handleJoinRoom);
-    return () => {
-      socket.off("room:join", handleJoinRoom);
-    };
+    if (socket) {
+      socket.on("room:join", handleJoinRoom);
+      return () => {
+        socket.off("room:join", handleJoinRoom);
+      };
+    }
   }, [socket, handleJoinRoom]);
 
   const handleCancel = () => {
@@ -144,7 +145,7 @@ const AppointmentDetails = () => {
             color="primary" 
             fullWidth 
             onClick={handleJoinRoomClick}
-            disabled={isRedirecting}
+            disabled={isRedirecting || !socket}
           >
             {isRedirecting ? 'Joining...' : 'Join Room'}
           </Button>
@@ -205,7 +206,7 @@ const AppointmentDetails = () => {
                 type="submit"
                 color="primary" 
                 variant="contained"
-                disabled={!userId || !roomId || isRedirecting}
+                disabled={!userId || !roomId || isRedirecting || !socket}
               >
                 {isRedirecting ? 'Joining...' : 'Confirm'}
               </Button>

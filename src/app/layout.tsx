@@ -2,8 +2,9 @@ import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
 import Sidebar from '../components/Sidebar/Sidebar';
 import Chatbot from '../components/Chatbot';
+import { AuthContextProvider } from '../context/AuthContext';
 
-import "./globals.css";
+import './globals.css';
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -15,6 +16,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         />
       </head>
       <body className="min-h-screen flex flex-col">
+        <AuthContextProvider>
           <Navbar />
           <div className="flex">
             <Sidebar />
@@ -24,6 +26,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           </div>
           <Chatbot />
           <Footer />
+        </AuthContextProvider>
       </body>
     </html>
   );
